@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: green;
+}
+
+.my-footer {
+  text-align: center;
+  background-color: green;
+  padding: 2rem;
+}

@@ -1,0 +1,108 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.header {
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 0.5rem;
+  margin-top: 5rem;
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2.3rem;
+    color: $cardNavBgColor;
+  }
+
+  //! buttons
+
+  .btns {
+    @include flex(rows, center, 1rem);
+    margin-top: 1rem;
+    button {
+      padding: 1rem;
+      border-radius: $borderRadius;
+      border: none;
+      cursor: pointer;
+      transition: all 1s;
+
+      &:hover {
+        background-color: $btnHoverColor;
+      }
+    }
+  }
+
+  //! Hamburger menu
+  .toggler {
+    //* checkbox
+    display: none;
+    opacity: 0; //! checkbox yerine hamburger gözüksün diye
+    //* üst üste bindirebilmek için
+    scale: 2; //! checkbox ile hamburgeri eşitlemiş olduk
+    position: absolute;
+    right: 14px;
+    z-index: 1; //! checkboxun z-indexini 1 yaptık ki hamburgere tıklandığında aslında checkboxın çalışmasını sağladık.
+    top: 22px;
+    cursor: pointer;
+  }
+
+  .icon {
+    //+ label > span
+    display: none; // büyük ekranlarda görünme
+    span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: black;
+      transition: all 0.7s;
+      //? aralarını açmak için
+      &:first-child {
+        margin-bottom: 5px;
+      }
+      &:nth-child(2) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@include media-xsm {
+  .header {
+    @include flex(rows, space-between, 0);
+    width: 100%;
+    .btns {
+      //+ buttonsların olduğu divin yüksekliğini düşürerek gizledik.
+      height: 0;
+      overflow: hidden;
+    }
+    .toggler {
+      display: block;
+    }
+    .icon {
+      //! labeli görünür yaptık.
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .toggler:checked + .icon {
+      //* checkbox check olduğunda labelın görünür olmasını sağladık. spanlarıda hamburger yerine x e dönüştürdük.
+      span {
+        &:first-child {
+          @include transform(rotate(45deg), translateY(10px));
+        }
+        &:nth-child(2) {
+          @include transform(scaleY(0)); //! ortadakini spanı görünmez yaptık
+        }
+        &:nth-child(3) {
+          @include transform(rotate(-45deg), translateY(-9px));
+        }
+      }
+    }
+    .toggler:checked ~ .btns {
+      //+ checkbox check olduğunda btns divini gösterdik.
+      height: 100%;
+      width: 100%;
+      @include flex(column, flex-end, 1rem);
+    }
+  }
+}

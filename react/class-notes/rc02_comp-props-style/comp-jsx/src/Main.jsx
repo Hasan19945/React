@@ -1,4 +1,4 @@
-//* Named export ile paylasima acildi
+ //* Named export ile paylasima acildi
 
 //* Public klasöründe olmayan resimlere erisebilmek icin import yapmak gerekir. */}
 import bird from "./img/bird.jpg"

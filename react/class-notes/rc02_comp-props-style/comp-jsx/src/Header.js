@@ -12,6 +12,9 @@ function Header() {
 
   return (
     <header className="header-main">
+    
+      <h1>ornekH1</h1>
+      bunu da yazacak
       {/* JSX */}
       <h1 style={{ color: "violet" }}>Header {mesaj}</h1>
     </header>

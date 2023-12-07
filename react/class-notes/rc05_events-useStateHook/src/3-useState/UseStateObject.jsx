@@ -18,7 +18,7 @@ const UseStateObject = () => {
   //? Boolean state
   const [toggle, setToggle] = useState(false)
 
-  const handleSwap = () => {
+  const handleDegistir = () => {
     // toggle = !toggle
     setToggle(!toggle)
     console.log(toggle)
@@ -62,7 +62,7 @@ const UseStateObject = () => {
         Tamamini Guncelle
       </button>
 
-      <button onClick={handleSwap}>Swap</button>
+      <button onClick={handleDegistir}>Degistir</button>
 
       {/* Toggle true ise UseStateCounter componentini goster aksi takdirde gosterme */}
       {toggle && <UseStateCounter />}

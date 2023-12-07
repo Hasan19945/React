@@ -23,7 +23,7 @@ import { useState } from "react"
 const UseStateCounter = () => {
   // let sayac = 0
   //? useState hook'u ile sayac adinda bir state tanimladik.
-  const [sayac, setSayac] = useState(0)
+  const [sayac, setSayac] = useState(34)
 
   console.log(sayac)
 
@@ -42,7 +42,7 @@ const UseStateCounter = () => {
 
   return (
     <div>
-      <h1>UseState Sayac</h1>
+      <h1>UseState Sayac Yazsin</h1>
       <h2>Sayac:{sayac}</h2>
 
       <button onClick={handleSayac}>Arttir</button>

@@ -1,0 +1,23 @@
+@mixin flex($direction, $justify, $gap, $align: center) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-direction: $direction;
+}
+
+@mixin transform($property1, $property2: "a") {
+  @if $property2 == "a" {
+    transform: $property1;
+  } @else {
+    transform: $property1 $property2;
+    // transform: rotate(45deg) translateY(10px);
+  }
+}
+
+@mixin media-xsm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}

@@ -30,7 +30,7 @@
 //!   };
 //! }, [state1, state2]); //? Dependency Array
 
-import { useEffect, useState } from "react"
+import { useEffectt, useState } from "react"
 
 const UseEffectHook = () => {
   const [count, setCount] = useState(0)
@@ -45,7 +45,7 @@ const UseEffectHook = () => {
   //   }
   // }, [count]) //? count herdegistiginde
 
-  useEffect(() => {
+  useEffectt(() => {
     //? ComponentDidMount
     console.log("Fetch started")
 

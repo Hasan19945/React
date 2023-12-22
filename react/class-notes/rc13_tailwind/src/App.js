@@ -7,7 +7,7 @@ function App() {
       <h1 className="text-2xl text-center text-purple-700 font-bold">
         Hello Tailwind
       </h1>
-      {/* <Typografy /> */}
+       <Typografy />
       <SpacingAndSizing />
     </div>
   );

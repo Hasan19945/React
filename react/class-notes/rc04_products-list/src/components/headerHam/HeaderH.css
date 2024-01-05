@@ -1,0 +1,99 @@
+.header {
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 0.5rem;
+  margin-top: 5rem;
+}
+.header h1 {
+  margin-bottom: 1rem;
+  font-size: 2.3rem;
+  color: #cd890c;
+}
+.header .btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: rows;
+  margin-top: 1rem;
+}
+.header .btns button {
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 1s;
+}
+.header .btns button:hover {
+  background-color: orangered;
+}
+.header .toggler {
+  display: none;
+  opacity: 0;
+  scale: 2;
+  position: absolute;
+  right: 14px;
+  z-index: 1;
+  top: 22px;
+  cursor: pointer;
+}
+.header .icon {
+  display: none;
+}
+.header .icon span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  transition: all 0.7s;
+}
+.header .icon span:first-child {
+  margin-bottom: 5px;
+}
+.header .icon span:nth-child(2) {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    flex-direction: rows;
+    width: 100%;
+  }
+  .header .btns {
+    height: 0;
+    overflow: hidden;
+  }
+  .header .toggler {
+    display: block;
+  }
+  .header .icon {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .header .toggler:checked + .icon span:first-child {
+    transform: rotate(45deg) translateY(10px);
+  }
+  .header .toggler:checked + .icon span:nth-child(2) {
+    transform: scaleY(0);
+  }
+  .header .toggler:checked + .icon span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px);
+  }
+  .header .toggler:checked ~ .btns {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=HeaderH.css.map */

@@ -18,6 +18,11 @@ function App() {
         src="https://cdn.pixabay.com/photo/2016/11/29/03/36/woman-1867093_640.jpg"
         tel="+1 55665 577"
       />
+      <Card
+      name= "Alice"
+      src="https://images.pexels.com/photos/9783960/pexels-photo-9783960.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+      tel="+738 8493 847"
+      />
     </div>
   )
 }

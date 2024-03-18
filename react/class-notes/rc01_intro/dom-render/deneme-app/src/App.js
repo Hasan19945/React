@@ -1,9 +1,20 @@
-function App() {
+function Profile () {
   return (
-    <div >
-      <h1>Deneme</h1>
-    </div>
+    <img
+    src="https://a.cdn-hotels.com/gdcs/production6/d781/3bae040b-2afb-4b11-9542-859eeb8ebaf1.jpg?impolicy=fcrop&w=800&h=533&q=medium"/>
   );
 }
 
-export default App;
+
+export default function Galley () {
+  return (
+    <>
+      <h1>
+        Denemeler
+      </h1>
+      <Profile/>
+      <Profile/>
+
+    </>
+  )
+}

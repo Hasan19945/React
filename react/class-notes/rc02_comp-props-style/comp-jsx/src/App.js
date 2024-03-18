@@ -10,10 +10,33 @@ function App() {
     <>
       <h1>React App</h1>
       <Header />
+      <Header />
       <Main />
       <Footer />
+      <Footer />
+      <Footer />
+
+      
     </>
   )
 }
 
 export default App
+
+
+
+
+
+//? 
+/* rafce
+import React from 'react'
+const App = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default App
+*/

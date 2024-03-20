@@ -43,11 +43,11 @@ export default Card
 //   console.log(data)
 //   return (
 //     <div>
-//       {data.map(({ id, language, img, btnName})
+//       {data.map(({ id, language, img, btnName}) => (
 //       <div>
 //         <h1>{language}</h1>
 //         <img src={img} alt="" />
-//         <Buton name={btnName}
+//         <Buton name={btnName} />
 //       </div>)}
 //     </div>
 //   )

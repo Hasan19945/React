@@ -1,6 +1,6 @@
 import Card from "./components/Card"
 
-function App() {
+function App  ()  {
   return (
     <div>
       <Card
@@ -28,3 +28,25 @@ function App() {
 }
 
 export default App
+
+
+
+// function App = () => {
+//   return (
+//     <div>
+//       <Card
+//       name="nehir"
+//       surname= "celik"
+//       src="dsdfhdgurigg"
+//       />
+
+//       <Card
+//       name="2"
+//       surname="2"
+//       src="2"
+//       </div>
+//   )
+// }
+
+// export default App
+

@@ -20,3 +20,33 @@ const Card = ({ veri }) => {
 }
 
 export default Card
+
+
+
+// import React from 'react'
+
+// const Card = ({veri}) => {
+  // const {id, name, job, comment, img} = veri[0]
+//   return (
+  ///?  {veri.map((person) => ())}  -------------{veri.map(({id, name, job}))}
+//     <div>
+//       <h2>{name}</h2>
+//       <h3>{job}</h3>
+//       <img src={img} alt="" />
+//       <div>
+//         <button>Small</button>
+//         <button>Large</button>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default Card
+
+export default Game(){
+  return (
+    <>
+    
+    </>
+  )
+)}

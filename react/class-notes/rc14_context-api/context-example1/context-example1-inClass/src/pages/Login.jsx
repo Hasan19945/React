@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
@@ -14,8 +14,36 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    navigate("/people")
+    const response =  fetch("https://api-prod.fiko.no/v1/has/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: user.email,
+          password: user.password
+        })
+
+      })
+      
+
+      
+      console.log("posttan sonrasi")
+    // navigate("/people")
     // navigate(-1)  //? geldigin yere geri don.
+
+    if (response.ok) {
+      
+      console.log("responsedan sonrasi")
+    // navigate("/people")
+      // İstek başarılı ise kullanıcıyı yönlendir
+      navigate("/people")
+    } else {
+      // İstek başarısız ise hata mesajını göster veya gerekli işlemi yap
+      console.error("Login failed:", response.statusText)
+      // Örneğin, kullanıcıya hata mesajını göstermek için uygun bir durum yönetimi yapılabilir.
+    }
+
   }
 
   console.log(user)

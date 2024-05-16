@@ -3,6 +3,9 @@ import {useState} from 'react';
 function App () {
   const [count, setCount] = useState(0);
   const [hesap , setHesap] = useState(4);
+
+
+  
   function handleClick() {
     setCount(count + 1);
     setHesap(hesap+3);
